@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SearchingContainer.scss';
+import '@styles/SearchingContainer.scss';
 
 const SearchingContainer = () => {
   return (

@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from '../containers/Layout';
-import Home from '../pages/Home';
-import SendEmail from '../pages/SendEmail';
-import NotFound from '../pages/NotFound';
-import MyAccount from '../pages/MyAccount';
-import NewPassword from '../pages/NewPassword';
-import '../styles/global.css';
-import CreateAccount from '../pages/CreateAccount';
-import Login from '../pages/Login';
+import Layout from '@containers/Layout';
+import Home from '@pages/Home';
+import SendEmail from '@pages/SendEmail';
+import NotFound from '@pages/NotFound';
+import MyAccount from '@pages/MyAccount';
+import NewPassword from '@pages/NewPassword';
+import '@styles/global.css';
+import CreateAccount from '@pages/CreateAccount';
+import Login from '@pages/Login';
 
 const App = () => {
   return (

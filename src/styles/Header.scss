@@ -1,6 +1,6 @@
 @import './vars';
 
-nav {
+.Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,9 +44,13 @@ nav {
 .navbar-left ul li a {
   text-decoration: none;
   color: var(--very-light-pink);
-  border: 1px solid var(--white);
+  // border: 1px solid var(--very-light-pink);
+	border-radius: 10px;
+  background: var(--secondary-color);
+  box-shadow:  8px 8px 16px #c9d3c1,
+            -8px -8px 16px #e7f3dd;
   padding: 8px;
-  border-radius: 8px;
+  margin: 10px;
 }
 
 .navbar-left ul li a:hover,

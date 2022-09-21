@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/Login.scss';
+import '@styles/Login.scss';
+
+import logo from '@logos/logo.svg';
 
 const Login = () => {
   return (
     <div className="Login">
       <div className="Login-container">
-        <img className="logo" src="https://random.com" alt="Logo" />
+        <img className="logo" src={logo} alt="Logo" />
         <form action="/" className="form">
           <label for="email" className="label">
             Email address
@@ -27,13 +29,12 @@ const Login = () => {
           />
           <button
             className="primary-button login-button"
-            
           >
             Log in
           </button>
-          <a href="/">Forgot my password</a>
+          <a href="/" className='login-a' >Forgot my password</a>
         </form>
-        <button className="secondary-button sighup-button">Sign up</button>
+        <button className="secondary-button signup-button">Sign up</button>
       </div>
     </div>
   );
