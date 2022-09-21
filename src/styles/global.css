@@ -1,0 +1,8 @@
+@import './_vars.scss';
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--secondary-color);
+}
+
+

@@ -1,0 +1,68 @@
+@import './vars';
+
+.card-wrapper {
+  width: 350px;
+  // height: 450px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 100px 250px 100px;
+  border-radius: 50px;
+  background: var(--secondary-color);
+  box-shadow:  20px 20px 60px #b8c1b0,
+              -20px -20px 60px #f8ffee;
+  padding: 20px;
+  margin: 0 auto;
+  .favSection {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    margin-top: 25px;
+    .date {
+      font-size: 28px;
+      color: var(--hospital-green);
+    }
+    .hour {
+      font-size: 26px;
+      color: var(--hospital-green);
+    }
+  }
+  .temperature {
+    height: 150px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 250px;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    .degrees {
+      font-size: 90px;
+      letter-spacing: 0.1px;
+      color: var(--hospital-green);
+    }
+    .icon {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .weather-img {
+        width: 100%;
+        height: auto;
+      }
+      .dayDescription {
+        font-size: 20px;
+        color: var(--hospital-green);
+      }
+    }
+  }
+  .city {
+    justify-self: end;
+    align-self: center;
+    font-size: 28px;
+    padding-right: 25px;
+    color: var(--hospital-green);
+  }
+}
