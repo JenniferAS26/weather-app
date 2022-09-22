@@ -1,7 +1,7 @@
 import React from 'react';
 import '@styles/SendEmail.scss';
 import iemail from '@icons/email.svg';
-import logo from '@logos/logo.svg';
+import logo from '@logos/logo.png';
 
 const SendEmail = () => {
   return (
@@ -17,7 +17,7 @@ const SendEmail = () => {
         >Login</button>
         <p className="resend">
           <span>Didn't recieve the email</span>
-          <a href="/">Resent</a>
+          <a href="/">Resend</a>
         </p>
       </div>
     </div>

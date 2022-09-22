@@ -1,0 +1,52 @@
+@import './vars';
+
+.FavoriteContent {
+  display: flex;
+  .FavoriteContent-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 180px;
+    max-width: 250px;
+    height: 190px;
+    margin: 20px 10px 15px;
+    padding: 0 15px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    .city {
+      padding-top: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: var(--light-color);
+    }
+    .temp {
+      padding: 5px 0;
+      font-size: 53px;
+      font-weight: bold;
+      line-height: 63px;
+      color: var(--light-color);
+      span {
+        font-size: 26px;
+        font-weight: 300;
+        vertical-align: text-top;
+        color: var(--light-color);
+      }
+    }
+    .addFav {
+      width: 131px;
+      height: 28px;
+      margin-top: 20px;
+      background: var(--secondary-color);
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      color: var(--messages-color);
+    }
+  }
+}
+

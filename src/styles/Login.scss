@@ -11,12 +11,12 @@
 		width: 300px;
 		border-radius: 50px;
 		background: var(--secondary-color);
-		box-shadow:  20px 20px 60px #b8c1b0,
-								-20px -20px 60px #f8ffee;
+		box-shadow:  20px 20px 54px #b9d7c6,
+            -20px -20px 54px #d9fde8;
 		padding: 30px;
 		.logo {
-			width: 150px;
-			margin-bottom: 48px;
+			width: 80px;
+			margin-bottom: 25px;
 			justify-self: center;
 			// display: none;
 		}
@@ -36,7 +36,7 @@
 				margin-bottom: 30px;
 			}
 			.login-a {
-				color: var(--hospital-green);
+				color: var(--primary-color);
 				font-size: var(--sm);
 				text-align: center;
 				text-decoration: none;
@@ -57,10 +57,10 @@
 }
 
 .primary-button {
-	background-color: var(--hospital-green);
+	background-color: var(--primary-color);
 	border-radius: 8px;
 	border: none;
-	color: var(--white);
+	color: var(--light-color);
 	width: 100%;
 	cursor: pointer;
 	font-size: var(--md);
@@ -68,10 +68,10 @@
 	height: 50px;
 }
 .secondary-button {
-	background-color: var(--white);
+	background-color: var(--light-color);
 	border-radius: 8px;
-	border: 1px solid var(--hospital-green);
-	color: var(--hospital-green);
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
 	width: 100%;
 	cursor: pointer;
 	font-size: var(--md);

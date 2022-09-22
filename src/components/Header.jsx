@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import '@styles/Header.scss';
+import Menu from "@components/Menu";
 
-import menu from '@icons/icon_menu.svg';
-import logo from '@logos/logo.svg';
+import menu from '@icons/menu.png';
+import logo from '@logos/logo.png';
 import user from '@icons/user.png';
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  }
+
   return (
     <nav className="Header">
 			<img src={menu} alt="menu" className="menu" />
@@ -22,68 +29,24 @@ const Header = () => {
             <a href="/">Weekend</a>
           </li>
           <li>
-            <a href="/">7 Days</a>
-          </li>
-          <li>
             <a href="/">Monthly</a>
           </li>
         </ul>
 			</div>
 			<div className="navbar-right">
 				<ul>
-					<li className="navbar-email">
+					<li className="navbar-email" >
 						mail@example.com
 					</li>
 					<li
 						className="navbar-shopping-cart"
-						// onClick={() => setToggleOrders(!toggleOrders)}
 					>
-						<img src={user} alt="Profile" />
-						{/* {state.cart.length > 0 ? <div>{state.cart.length}</div> : null} */}
+						<img src={user} alt="Profile" onClick={handleToggle} />
 					</li>
 				</ul>
 			</div>
-			{/* {toggle && <Menu />}
-			{toggleOrders && <MyOrder />} */}
+      {toggle && <Menu/>}
 		</nav>
-    /*{ <nav>
-      <img
-        src={menu}
-        alt="Icono de menu"
-        className="menu"
-      />
-      <div className="navbar-left">
-        <img src={logo} alt="" className="logo" />
-        <ul>
-          <li>
-            <a href="/">Today</a>
-          </li>
-          <li>
-            <a href="/">Hourly</a>
-          </li>
-          <li>
-            <a href="/">Weekend</a>
-          </li>
-          <li>
-            <a href="/">7 Days</a>
-          </li>
-          <li>
-            <a href="/">Monthly</a>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar-right">
-        <ul>
-          <li className="navbar-email">email@example.com</li>
-          <li className="navbar-shopping-cart">
-            <img
-              src={user}
-              alt="Profile"
-            />
-          </li>
-        </ul>
-      </div>
-    </nav> }*/
   );
 };
 
