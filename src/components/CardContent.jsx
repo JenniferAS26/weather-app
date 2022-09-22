@@ -1,5 +1,7 @@
 import React from 'react';
 import '@styles/CardContent.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const CardContent = ({ data, setData }) => {
   const zipcode = '15878';
@@ -12,12 +14,12 @@ const CardContent = ({ data, setData }) => {
 
   return (
     <div className='card-wrapper'>
-        <div className="favSection">
-          <p className="date">{data.data[0].timezone}</p>
-          <p className="hour">{data.data[0].country_code}</p>
+        <div className="zone-section">
+          <p className="zone-section__timezone">{data.data[0].timezone}</p>
+          <p className="zone-section__country">{data.data[0].country_code}</p>
         </div>
         <div className="temperature">
-          <h1 className="degrees">
+          <h1 className="temperature__degrees">
           {data.data[0].temp}
           <span>°C</span>
           </h1>
@@ -25,14 +27,24 @@ const CardContent = ({ data, setData }) => {
             <img
               src={iconURL}
               alt="weather icon"
-              className="weather-img"
+              className="icon__weather-img"
             />
-            <p className="dayDescription">{data.data[0].weather.description}</p>
+            <p className="icon__day-desp">{data.data[0].weather.description}</p>
           </div>
         </div>
-        <p className="city">{data.data[0].city_name}</p>
-        
-        <p hidden>{zipcode}</p>
+        <div className='bottom-section'>
+          <div className='bottom-section-container'>
+            {/* <button className='bottom-section-container__add primary-button'>
+              <FontAwesomeIcon icon={faHeart} />
+            </button> */}
+            <div className='bottom-section-container__add-fav'>
+              <input type="checkbox" />
+              <FontAwesomeIcon icon={faHeart} className='iconFav' />
+            </div>
+            <p hidden>{zipcode}</p>
+          </div>
+          <p className="bottom-section__city">{data.data[0].city_name}</p>
+        </div>
       </div>
   );
 };

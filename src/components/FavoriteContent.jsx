@@ -1,6 +1,7 @@
 import React from 'react';
 import '@styles/FavoriteContent.scss';
 
+
 const FavoriteContent = () => {
   return (
     <div className="FavoriteContent">
@@ -55,7 +56,7 @@ const FavoriteContent = () => {
         <span>°C</span>
         </p>
         <button className="addFav" type="button">
-          Fav
+        Fav
         </button>
       </div>
     </div>

@@ -1,12 +1,13 @@
 import React from 'react';
 import '@styles/NewPassword.scss';
-import logo from '@logos/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUmbrella } from '@fortawesome/free-solid-svg-icons';
 
 const NewPassword = () => {
   return (
     <div className="NewPassword">
       <div className="NewPassword-container">
-        <img className="logo" src={logo} alt="Logo"/>
+        <FontAwesomeIcon icon={faUmbrella} className="logo" />
         <h1 className="title">Create a new password</h1>
         <p className="subtitle">Enter a new password for you account</p>
         <form action="/" className="form">

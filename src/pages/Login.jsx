@@ -1,13 +1,13 @@
 import React from 'react';
 import '@styles/Login.scss';
-
-import logo from '@logos/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUmbrella } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   return (
     <div className="Login">
       <div className="Login-container">
-        <img className="logo" src={logo} alt="Logo" />
+        <FontAwesomeIcon icon={faUmbrella} className="logo" />
         <form action="/" className="form">
           <label for="email" className="label">
             Email address

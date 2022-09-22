@@ -11,8 +11,9 @@
   .search-form {
     display: flex;
     flex-direction: row;
+    width: 650px;
     .search-input {
-      width: 220px;
+      width: 80%;
       height: auto;
       border: none;
       border-top-left-radius: 5px;
@@ -29,7 +30,7 @@
     }
     .search-button {
       background-color: var(-primary-color);
-      width: 80px;
+      width: 20%;
       height: auto;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;

@@ -10,11 +10,13 @@
 
 .menu {
   display: none;
+  color: var(--primary-color);
+  font-size: 40px;
 }
 
 .nav-logo {
-  width: 60px;
-  height: 60px;
+  font-size: 45px;
+  color: var(--primary-color);
   align-self: center;
 }
 
@@ -68,16 +70,18 @@
   margin-right: 12px;
 }
 
-.navbar-shopping-cart {
+.navbar-account {
   position: relative;
-  img {
+  .iconUser {
+    font-size: 35px;
+    color: var(--primary-color);
     align-self: end;
   }
 }
 
 
 
-// .navbar-shopping-cart div {
+// .navbar-account div {
 //   width: 15px;
 //   height: 15px;
 //   background-color: var(--primary-color);

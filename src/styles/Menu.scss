@@ -9,6 +9,8 @@
 	position: absolute;
 	top: 101px;
 	right: 40px;
+	background: var(--primary-color);
+	color: var(--secondary-color);
 }
 .Menu ul {
 	list-style: none;
@@ -27,7 +29,7 @@
 	border-top: 1px solid var(--messages-color);
 }
 .Menu ul li:last-child a {
-	color: var(--primary-color);
+	color: var(--text-input-field);
 	font-size: var(--sm);
 }
 .Menu ul li a {

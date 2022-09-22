@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import '@styles/Header.scss';
 import Menu from "@components/Menu";
-
-import menu from '@icons/menu.png';
-import logo from '@logos/logo.png';
-import user from '@icons/user.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUmbrella, faUserPen, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -15,9 +13,9 @@ const Header = () => {
 
   return (
     <nav className="Header">
-			<img src={menu} alt="menu" className="menu" />
+      <FontAwesomeIcon icon={faBarsStaggered} className="menu" />
 			<div className="navbar-left">
-				<img src={logo} alt="logo" className="nav-logo" />
+        <FontAwesomeIcon icon={faUmbrella} className="nav-logo" />
 				<ul>
           <li>
             <a href="/">Today</a>
@@ -39,9 +37,9 @@ const Header = () => {
 						mail@example.com
 					</li>
 					<li
-						className="navbar-shopping-cart"
+						className="navbar-account"
 					>
-						<img src={user} alt="Profile" onClick={handleToggle} />
+            <FontAwesomeIcon icon={faUserPen} onClick={handleToggle} className='iconUser' />
 					</li>
 				</ul>
 			</div>
