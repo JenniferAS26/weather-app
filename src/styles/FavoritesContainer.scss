@@ -12,7 +12,7 @@
   }
   .FavoritesContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     overflow-x: scroll;
     overscroll-behavior-x: contain;

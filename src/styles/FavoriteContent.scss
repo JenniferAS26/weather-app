@@ -17,15 +17,38 @@
     padding: 0 15px;
     background-color: var(--primary-color);
     border-radius: 15px;
-    .city {
-      padding-top: 30px;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 18px;
-      color: var(--light-color);
+    .top-section{
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__addFav {
+        width: 42px;
+        height: 42px;
+        margin-top: 20px;
+        border-radius: 150px;
+        background: var(--primary-color);
+        box-shadow:  4px 4px 9px #0c7958,
+                    -4px -4px 9px #18f7b4;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        .brokenHeart {
+          color: var(--light-color);
+          font-size: 25px;
+        }
+      }
+      &__city {
+        padding-top: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 18px;
+        color: var(--light-color);
+      }
     }
-    .temp {
-      padding: 5px 0;
+    &__temp{
+      padding: 15px 0;
       font-size: 53px;
       font-weight: bold;
       line-height: 63px;
@@ -36,17 +59,6 @@
         vertical-align: text-top;
         color: var(--light-color);
       }
-    }
-    .addFav {
-      width: 131px;
-      height: 28px;
-      margin-top: 20px;
-      background: var(--secondary-color);
-      border-radius: 4px;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      color: var(--messages-color);
     }
   }
 }
