@@ -8,9 +8,17 @@ import FavoriteContent from '@components/FavoriteContent';
 
 
 const Home = () => {
+  let localStorageFavorites = localStorage.getItem('FAV_LIST');
+  let parsedFavorites = [];
+  if (!localStorageFavorites) {
+    localStorage.setItem('FAV_LIST', JSON.stringify([]));
+  } else {
+    parsedFavorites = JSON.parse(localStorageFavorites);
+  }
 
-  const [favoritesList, setFavoritesList] = useState(["33140"]);
-  const [data, setData] = useState({
+  const [favoritesList, setFavoritesList] = useState(parsedFavorites);
+  const [data, setData] = useState(
+    {
     'data': [
       {
         'temp': 35.5,
@@ -23,7 +31,10 @@ const Home = () => {
         'country_code': 'default'
       }
     ]
-  });
+  }
+  );
+  
+
   
   return (
     <>
@@ -43,7 +54,12 @@ const Home = () => {
       </CardContainer>
       <FavoritesContainer>
       {favoritesList.map (element => (
-          <FavoriteContent/>
+          <FavoriteContent
+            favoritesList={favoritesList}
+            setFavoritesList={setFavoritesList}
+            element={element}
+            key={element}
+          />
         ))}
       </FavoritesContainer>
     </>

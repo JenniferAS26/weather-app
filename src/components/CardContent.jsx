@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '@styles/CardContent.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const CardContent = ({ data, setData,  favoritesList, setFavoritesList}) => {
-  const zipcode = '15878';
-
-  if (!data) {
-    return <div className='App'>Loading...</div>;
-  }
-  console.log(data);
-  const iconURL = `https://www.weatherbit.io/static/img/icons/${data.data[0].weather.icon}.png`;
+  const [checked, setChecked] = useState(false);
 
   const handleFavoriteButton = (evt) => {
+    const favListCopy = [...favoritesList];
     if (evt.target.checked){
       console.log("Marcado");
       favListCopy.push(data.data[0].city_name)
-      setFavoritesList(favListCopy);
+      setFavoritesList(Array.from(new Set(favListCopy)));
+      
+      const persistedFavorites = JSON.stringify(Array.from(new Set(favListCopy)));
+      localStorage.setItem('FAV_LIST', persistedFavorites);
     }
   }
+
+  if (!data) {
+    return null;
+  }
+
+  const iconURL = `https://www.weatherbit.io/static/img/icons/${data.data[0].weather.icon}.png`;
+
+  useEffect(()=> {
+    setChecked(false);
+  })
   return (
     <div className='card-wrapper'>
         <div className="zone-section">
@@ -42,10 +50,9 @@ const CardContent = ({ data, setData,  favoritesList, setFavoritesList}) => {
         <div className='bottom-section'>
           <div className='bottom-section-container'>
             <div className='bottom-section-container__add-fav'>
-              <input type="checkbox" onChange={handleFavoriteButton}/>
+              <input type="checkbox" onChange={handleFavoriteButton} checked={checked}/>
               <FontAwesomeIcon icon={faHeart} className='iconFav' />
             </div>
-            <p hidden>{zipcode}</p>
           </div>
           <p className="bottom-section__city">{data.data[0].city_name}</p>
         </div>

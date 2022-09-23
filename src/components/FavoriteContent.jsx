@@ -8,10 +8,14 @@ import { faHeartCrack } from '@fortawesome/free-solid-svg-icons';
 const FavoriteContent = ({favoritesList, setFavoritesList, element}) => {
   
   const handleRemoveFavoriteButton = (evt) => {
-      // const idx = favoritesList.indexOf()    
-      // favListCopy.push(data.data[0].city_name)
-      // setFavoritesList(favListCopy);
+      const favListCopy = [...favoritesList];
+      const idx = favoritesList.indexOf(element);
+      favListCopy.splice(idx, 1);
+      setFavoritesList(favListCopy);
       console.log("Desmarcado");
+
+      const persistedFavorites = JSON.stringify(favListCopy);
+      localStorage.setItem('FAV_LIST', persistedFavorites);
   }
 
   
@@ -22,7 +26,7 @@ const FavoriteContent = ({favoritesList, setFavoritesList, element}) => {
   const [data, setData] = useState(null);
 
   useEffect(()=>{
-    const APIKey = 'd2e4088b81004ebea1f618ddc76bdd25';
+    const APIKey = 'dd66896daef04227a32dae3350ea2baa';
     const APIUrl = `current?&country=US&city=${element}&key=${APIKey}`
     
     api.get(APIUrl).then((response) => {
@@ -42,7 +46,7 @@ const FavoriteContent = ({favoritesList, setFavoritesList, element}) => {
           <button 
             className="top-section__addFav" 
             type="button" 
-            onChange={handleRemoveFavoriteButton}
+            onClick={handleRemoveFavoriteButton}
             >
               <FontAwesomeIcon icon={faHeartCrack} className='brokenHeart' />
               </button>

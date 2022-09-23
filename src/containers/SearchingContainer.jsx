@@ -11,7 +11,7 @@ const SearchingContainer = ({ data, setData }) => {
 
   const retrieveData = async (input) => {
     let APIUrl = '';
-    const APIKey = 'd2e4088b81004ebea1f618ddc76bdd25';
+    const APIKey = 'dd66896daef04227a32dae3350ea2baa';
 
     if (!isNaN(input)) {
       APIUrl = `current?postal_code=${input}&key=${APIKey}`
