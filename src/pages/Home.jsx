@@ -9,6 +9,7 @@ import FavoriteContent from '../components/FavoriteContent';
 
 const Home = () => {
 
+  const [favoritesList, setFavoritesList] = useState(["33140"]);
   const [data, setData] = useState({
     'data': [
       {
@@ -23,7 +24,7 @@ const Home = () => {
       }
     ]
   });
-
+  
   return (
     <>
       <Header/>
@@ -35,10 +36,15 @@ const Home = () => {
         <CardContent
           data={data}
           setData={setData}
+          favoritesList= {favoritesList}
+          setFavoritesList={setFavoritesList}
+
         />
       </CardContainer>
       <FavoritesContainer>
-        <FavoriteContent/>
+      {favoritesList.map (element => (
+          <FavoriteContent/>
+        ))}
       </FavoritesContainer>
     </>
   );

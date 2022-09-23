@@ -3,7 +3,7 @@ import '@styles/CardContent.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-const CardContent = ({ data, setData }) => {
+const CardContent = ({ data, setData,  favoritesList, setFavoritesList}) => {
   const zipcode = '15878';
 
   if (!data) {
@@ -12,6 +12,13 @@ const CardContent = ({ data, setData }) => {
   console.log(data);
   const iconURL = `https://www.weatherbit.io/static/img/icons/${data.data[0].weather.icon}.png`;
 
+  const handleFavoriteButton = (evt) => {
+    if (evt.target.checked){
+      console.log("Marcado");
+      favListCopy.push(data.data[0].city_name)
+      setFavoritesList(favListCopy);
+    }
+  }
   return (
     <div className='card-wrapper'>
         <div className="zone-section">
@@ -38,7 +45,7 @@ const CardContent = ({ data, setData }) => {
               <FontAwesomeIcon icon={faHeart} />
             </button> */}
             <div className='bottom-section-container__add-fav'>
-              <input type="checkbox" />
+              <input type="checkbox" onChange={handleFavoriteButton}/>
               <FontAwesomeIcon icon={faHeart} className='iconFav' />
             </div>
             <p hidden>{zipcode}</p>
