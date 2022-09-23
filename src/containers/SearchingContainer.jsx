@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const SearchingContainer = ({ data, setData }) => {
   const [searchValue, setSearchValue] = useState();
-  
+
   const api = axios.create({
     baseURL: 'http://api.weatherbit.io/v2.0/',
   });
