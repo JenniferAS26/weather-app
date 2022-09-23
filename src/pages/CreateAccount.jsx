@@ -1,10 +1,13 @@
 import React from 'react';
 import '@styles/CreateAccount.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUmbrella } from '@fortawesome/free-solid-svg-icons';
 
 const CreateAccount = () => {
   return (
     <div className="CreateAccount">
 				<div className="CreateAccount-container">
+					<FontAwesomeIcon icon={faUmbrella} className="logo" />
 					<h1 className="title">My account</h1>
 					<form action="/" className="form">
 						<div>

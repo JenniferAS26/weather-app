@@ -3,8 +3,8 @@ import Header from '@components/Header';
 import CardContainer from '@containers/CardContainer';
 import SearchingContainer from '@containers/SearchingContainer';
 import CardContent from '@components/CardContent';
-import FavoritesContainer from '../containers/FavoritesContainer';
-import FavoriteContent from '../components/FavoriteContent';
+import FavoritesContainer from '@containers/FavoritesContainer';
+import FavoriteContent from '@components/FavoriteContent';
 
 
 const Home = () => {

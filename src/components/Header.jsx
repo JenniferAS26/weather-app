@@ -15,7 +15,7 @@ const Header = () => {
     <nav className="Header">
       <FontAwesomeIcon icon={faBarsStaggered} className="menu" />
 			<div className="navbar-left">
-        <FontAwesomeIcon icon={faUmbrella} className="nav-logo" />
+        <FontAwesomeIcon icon={faUmbrella} className="navbar-left__logo" />
 				<ul>
           <li>
             <a href="/">Today</a>

@@ -80,8 +80,8 @@
 	height: 50px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
 	.logo {
-		display: block;
+		display: none;
 	}
 }
