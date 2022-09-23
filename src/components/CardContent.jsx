@@ -34,9 +34,6 @@ const CardContent = ({ data, setData }) => {
         </div>
         <div className='bottom-section'>
           <div className='bottom-section-container'>
-            {/* <button className='bottom-section-container__add primary-button'>
-              <FontAwesomeIcon icon={faHeart} />
-            </button> */}
             <div className='bottom-section-container__add-fav'>
               <input type="checkbox" />
               <FontAwesomeIcon icon={faHeart} className='iconFav' />
