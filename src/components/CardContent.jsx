@@ -41,9 +41,6 @@ const CardContent = ({ data, setData,  favoritesList, setFavoritesList}) => {
         </div>
         <div className='bottom-section'>
           <div className='bottom-section-container'>
-            {/* <button className='bottom-section-container__add primary-button'>
-              <FontAwesomeIcon icon={faHeart} />
-            </button> */}
             <div className='bottom-section-container__add-fav'>
               <input type="checkbox" onChange={handleFavoriteButton}/>
               <FontAwesomeIcon icon={faHeart} className='iconFav' />

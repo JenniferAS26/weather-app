@@ -34,6 +34,10 @@
         font-size: 16px;
         font-weight: bold;
         border: none;
+        cursor: pointer;
+        &:hover {
+          background: radial-gradient(circle, hsla(162, 82%, 40%, 1) 0%, hsla(161, 71%, 35%, 1) 64%, hsla(162, 82%, 40%, 1) 82%);
+        }
         .brokenHeart {
           color: var(--light-color);
           font-size: 25px;
